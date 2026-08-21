@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow - To Do List</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- HEADER -->
+        <header class="header">
+
+            <div>
+                <p class="eyebrow">MY PRODUCTIVITY</p>
+                <h1>TaskFlow</h1>
+                <p class="subtitle">
+                    Organize your tasks. Get things done.
+                </p>
+            </div>
+
+            <button id="themeButton" class="theme-btn">
+                🌙
+            </button>
+
+        </header>
+
+
+        <!-- STATS -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <span class="stat-number" id="totalTasks">0</span>
+                <span class="stat-label">Total</span>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-number" id="activeTasks">0</span>
+                <span class="stat-label">Active</span>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-number" id="completedTasks">0</span>
+                <span class="stat-label">Completed</span>
+            </div>
+
+        </section>
+
+
+        <!-- ADD TASK -->
+        <section class="task-input-section">
+
+            <div class="input-row">
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="What do you need to do?"
+                    autocomplete="off"
+                >
+
+                <button id="addTaskButton">
+                    + Add Task
+                </button>
+
+            </div>
+
+
+            <div class="task-options">
+
+                <select id="priorityInput">
+
+                    <option value="low">
+                        🟢 Low Priority
+                    </option>
+
+                    <option value="medium" selected>
+                        🟡 Medium Priority
+                    </option>
+
+                    <option value="high">
+                        🔴 High Priority
+                    </option>
+
+                </select>
+
+
+                <input
+                    type="date"
+                    id="dateInput"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTROLS -->
+        <section class="controls">
+
+            <div class="filters">
+
+                <button
+                    class="filter-btn active"
+                    data-filter="all"
+                >
+                    All
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="active"
+                >
+                    Active
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="completed"
+                >
+                    Completed
+                </button>
+
+            </div>
+
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search tasks..."
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- TASK LIST -->
+        <main>
+
+            <div id="taskList" class="task-list">
+                <!-- Tasks will be inserted here -->
+            </div>
+
+            <div
+                id="emptyState"
+                class="empty-state"
+            >
+
+                <div class="empty-icon">
+                    ✓
+                </div>
+
+                <h2>No tasks here</h2>
+
+                <p>
+                    Add a task and start getting things done.
+                </p>
+
+            </div>
+
+        </main>
+
+
+        <!-- FOOTER -->
+        <footer>
+
+            <button id="clearCompleted">
+                Clear completed
+            </button>
+
+            <span>
+                Your tasks are saved automatically.
+            </span>
+
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
